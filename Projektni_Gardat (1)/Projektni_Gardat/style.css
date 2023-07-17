@@ -1,0 +1,364 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body{
+    background-color: rgb(218, 228, 183);
+}
+
+img{
+    max-width: 100%;
+    width: 350px;
+    height: 250px;
+    display: block;
+
+}
+
+.grid-container {
+    display: grid;
+    max-height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20% 1fr 0.4fr 10%;
+    grid-template-areas: 
+    "header header header"
+    "nav section section"
+    "article article aside"
+    "footer footer footer";
+
+    grid-gap: 0.4rem; 
+}
+
+/*/Mobitel/*/
+@media screen and (max-width: 630px)
+  {
+
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 0.85fr 1.6fr 0.8fr 0.8fr 1.6fr ;
+        
+        grid-template-areas: 
+        "header"
+        "nav"
+        "section"
+        "article"
+        "aside"
+        "footer";
+
+        grid-gap: 0.3rem; 
+    }
+
+   body{
+    background-color: aqua;
+   }
+    
+}
+
+/*/Tablet/*/
+@media (min-width: 621px) and (max-width: 1550px)
+  {
+
+    .grid-container{
+        grid-template-columns:repeat(3fr, 1fr);
+        grid-template-rows: 20% 1fr 0.6fr 0.6fr 15%;
+        
+        
+        grid-template-areas: 
+        "header header header"
+        "nav section section"
+        "article article article"
+        "aside aside aside"
+        "footer footer footer";
+
+        grid-gap: 0.3rem; 
+    }
+
+    body{
+        background-color: rgb(18, 19, 104);
+       }
+  
+}
+
+header{
+    grid-area: header;
+    background: url(img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+h1,h3{
+    text-align: center ;
+    color: rgb(9, 26, 82);
+
+}
+
+h1{
+    text-transform: uppercase;
+    padding-top: 3rem;
+    font-size: 2.5rem;
+}
+
+h3{
+    padding-bottom: 3rem;
+}
+h4{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+/*/Slike na naslovnici/*/
+.imgS{
+    
+    padding: 0.8rem;
+    border: 0.2rem dotted rgb(0, 128, 111) ;
+    margin: 1rem;
+    background-color: lightgreen;
+    border-radius: 1rem;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    bottom: 13rem;
+    left: 0;
+    right: 2rem;
+    color: black;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text2 {
+    position: absolute;
+    top: 18rem;
+    bottom: 0;
+    left: 0;
+    right: 2rem;
+    color: black;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+    border: 0.2rem dotted rgb(0, 73, 63) ;
+    margin: 1rem;
+    background-color: rgb(90, 202, 90);
+    border-radius: 1rem;
+    
+}
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 350px;
+}
+
+ a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+
+    font-size: 2rem;
+    transition: 2s ease;
+    color: rgb(78, 10, 10);
+}
+
+
+
+/*/PORTFOLIO/*/
+
+.imgSS{
+    
+    padding: 0.8rem;
+    border: 0.2rem dotted rgb(37, 15, 2) ;
+    margin: 1rem;
+    background-color: rgb(107, 66, 66);
+    border-radius: 1rem;
+}
+.section2{
+    background-color: rgb(95, 144, 167);
+    grid-area: section;
+
+    position: relative;
+    text-align: center;
+    color: white;
+
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+  
+  
+}
+
+.pp{
+    
+    text-align: center;
+    padding: 0.8rem;
+    border: 0.2rem dashed rgb(37, 15, 2) ;
+    margin: 1rem;
+    
+    background-color: rgb(107, 66, 66);
+    border-radius: 1rem;
+    color: white;
+    
+    
+   
+}
+
+/*/Kontakt/*/
+
+.email a{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+}
+
+/*/Footer/*/
+.fa {
+    padding: 2rem;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 10px ;
+
+  }
+  
+  
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+
+  .audio{
+    display: block;
+    padding-top: 1rem;
+    
+  }
+
+  /*/*/
+
+.video{
+    display: block;
+    
+    text-align: center;
+    padding: 2rem;
+    height: 25vh;
+    width: 100%;
+    
+}
+
+nav{
+    background-color: rgb(60, 112, 136);
+    grid-area: nav;
+}
+section{
+    background-color: rgb(246, 255, 127);
+    grid-area: section;
+
+    position: relative;
+    text-align: center;
+    color: white;
+
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+  
+  
+}
+article{
+    background-color:  rgb(60, 112, 136);
+    grid-area: article;
+    display: block;
+    
+}
+aside{
+    background-color:  rgb(60, 112, 136);
+    grid-area: aside;
+    
+}
+
+.kutija{
+    background-color: rgb(30, 70, 88);
+    border: 5px solid rgb(4, 19, 26);
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out, height 0ms;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+.kutija:hover{
+    background-color: rgb(90, 202, 90);
+    border-color: rgb(43, 134, 43);
+    transform: rotate(180deg);
+    height: 100px;
+}
+footer{
+    
+    grid-area: footer;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    height: 20vh;
+    width: 100%;
+
+    background: url(img/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  
+  
+  li a:hover {
+    
+    color: white;
+  }
+
+
+
+
+
+
+
